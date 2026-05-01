@@ -16,6 +16,8 @@ const navItems = [
   { title: "Home", href: "/" },
   { title: "About", href: "/about" },
   { title: "Academic", href: "/academic" },
+  { title: "Statistics", href: "/statistics" },
+  { title: "Campus", href: "/campus" },
   { title: "Events", href: "/events" },
   { title: "Alumni", href: "/alumni" },
   { title: "Staff", href: "/staff" },

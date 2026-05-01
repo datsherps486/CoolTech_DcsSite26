@@ -62,7 +62,7 @@ export default function Home() {
 
         {/* Center Column: Hero & DCS Foundations (Main Content) */}
         <div className="md:col-span-6 p-6 md:p-10 border-b md:border-b-0 order-1 md:order-2">
-          <div className="mb-12">
+          <div className="mb-12 text-center">
             <motion.span 
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -74,76 +74,77 @@ export default function Home() {
               initial={{ opacity: 0, scale: 0.98 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6 }}
-              className="text-4xl md:text-7xl font-serif leading-[0.95] mb-6 tracking-tighter bg-gradient-to-br from-foreground to-foreground/60 bg-clip-text text-transparent"
+              className="text-3xl md:text-5xl font-serif mb-8 tracking-tighter bg-gradient-to-br from-foreground to-foreground/60 bg-clip-text text-transparent italic"
             >
-              Vision &<br/>Character
+              Damphu-CS
             </motion.h2>
-            
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mt-10 mb-12">
-              <div className="space-y-3 p-6 rounded-2xl bg-secondary/5 border border-border/30 hover:border-primary/30 transition-colors">
-                <h3 className="text-[10px] font-bold uppercase border-b border-border/30 pb-2 tracking-widest flex items-center gap-2 text-primary">
-                  <span className="w-1.5 h-1.5 bg-primary rounded-full shadow-[0_0_8px_rgba(var(--primary),0.5)]"></span> Vision
-                </h3>
-                <p className="text-xs italic font-serif leading-relaxed text-foreground/80">
-                  "To educate and equip learners with competencies for the 21st century, prioritizing holistic development so they become caring, dependable, and honest human beings."
-                </p>
+
+              <div className="flex justify-center mb-10">
+                <div className="relative w-[300px] h-[200px] rounded-2xl overflow-hidden shadow-2xl border border-primary/20 group">
+                  <img 
+                    src="/pic1.jpg" 
+                    alt="Damphu Central School Profile" 
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    referrerPolicy="no-referrer"
+                  />
+                </div>
               </div>
-              <div className="space-y-3 p-6 rounded-2xl bg-secondary/5 border border-border/30 hover:border-primary/30 transition-colors">
-                <h3 className="text-[10px] font-bold uppercase border-b border-border/30 pb-2 tracking-widest flex items-center gap-2 text-primary">
-                   <span className="w-1.5 h-1.5 border border-primary rounded-full"></span> Mission
+
+              <div className="mt-12 mb-16 max-w-3xl mx-auto px-6">
+                <h3 className="text-[12px] font-bold uppercase tracking-[0.5em] text-primary mb-6 border-b border-primary/20 pb-2">
+                  Vision
                 </h3>
-                <p className="text-xs font-sans leading-relaxed text-foreground/70">
-                  To provide a safe, supportive, and conducive learning environment through a whole-school approach that promotes responsibility, respect, and resilience.
+                <p className="text-sm md:text-base italic font-serif leading-relaxed text-foreground/90 text-center px-4">
+                  "An aspiring and dynamic educational institute committed to building enlightened and contributory citizens for a just and harmonious society."
                 </p>
               </div>
             </div>
-          </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 mt-10">
-            <section>
-              <h3 className="text-[10px] font-bold uppercase border-b border-border/30 pb-2 mb-4 tracking-widest text-primary/60">School Goals</h3>
-              <ul className="space-y-3">
-                {[
-                  { label: "01", value: "Nurture students with moral values" },
-                  { label: "02", value: "Strengthen student etiquette (Driglam)" },
-                  { label: "03", value: "Produce Disciplined, Caring citizens" },
-                  { label: "04", value: "Collaborative success with parents" },
-                ].map((item) => (
-                  <li key={item.label} className="flex gap-3 border-b border-border/10 pb-2 group">
-                    <span className="font-serif italic text-[10px] text-primary/40 group-hover:text-primary transition-colors">{item.label}</span>
-                    <span className="text-[11px] font-medium leading-tight text-foreground/90">{item.value}</span>
-                  </li>
-                ))}
-              </ul>
-            </section>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 mt-10">
+              <section>
+                <h3 className="text-[10px] font-bold uppercase border-b border-border/30 pb-2 mb-4 tracking-widest text-primary/60">School Goals</h3>
+                <ul className="space-y-3">
+                  {[
+                    { label: "01", value: "Nurture students with moral values" },
+                    { label: "02", value: "Strengthen student etiquette (Driglam)" },
+                    { label: "03", value: "Produce Disciplined, Caring citizens" },
+                    { label: "04", value: "Collaborative success with parents" },
+                  ].map((item) => (
+                    <li key={item.label} className="flex gap-3 border-b border-border/10 pb-2 group">
+                      <span className="font-serif italic text-[10px] text-primary/40 group-hover:text-primary transition-colors">{item.label}</span>
+                      <span className="text-[11px] font-medium leading-tight text-foreground/90">{item.value}</span>
+                    </li>
+                  ))}
+                </ul>
+              </section>
 
-            <section>
-              <h3 className="text-[10px] font-bold uppercase border-b border-border/30 pb-2 mb-4 tracking-widest text-primary/60">Core Principle</h3>
-              <div className="relative group overflow-hidden rounded-2xl p-0.5">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary to-emerald-500 opacity-20 group-hover:opacity-40 transition-opacity" />
-                <div className="relative bg-secondary/10 backdrop-blur-md p-5 space-y-4 rounded-[14px]">
-                  <p className="text-xl font-serif italic text-center border-b border-primary/20 pb-3 text-primary">
-                    "Lue, Nga, Yi sum gi drig"
-                  </p>
-                  <div className="grid grid-cols-3 gap-1 text-[8px] uppercase tracking-widest font-bold text-center opacity-80 text-foreground">
-                    <div>Physical<br/>Discipline</div>
-                    <div>Verbal<br/>Discipline</div>
-                    <div>Mind<br/>Discipline</div>
+              <section>
+                <h3 className="text-[10px] font-bold uppercase border-b border-border/30 pb-2 mb-4 tracking-widest text-primary/60">Core Principle</h3>
+                <div className="relative group overflow-hidden rounded-2xl p-0.5">
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary to-emerald-500 opacity-20 group-hover:opacity-40 transition-opacity" />
+                  <div className="relative bg-secondary/10 backdrop-blur-md p-5 space-y-4 rounded-[14px]">
+                    <p className="text-xl font-serif italic text-center border-b border-primary/20 pb-3 text-primary">
+                      "Lue, Nga, Yi sum gi drig"
+                    </p>
+                    <div className="grid grid-cols-3 gap-1 text-[8px] uppercase tracking-widest font-bold text-center opacity-80 text-foreground">
+                      <div>Physical<br/>Discipline</div>
+                      <div>Verbal<br/>Discipline</div>
+                      <div>Mind<br/>Discipline</div>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </section>
+              </section>
+            </div>
+            
+            <div className="mt-12 flex gap-4">
+              <Button size="lg" className="rounded-full px-10 py-6 bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-[1.02] active:scale-95 text-xs uppercase tracking-[0.2em] font-bold shadow-xl shadow-primary/20 transition-all">
+                View Learning Paths <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+              <Button variant="outline" size="lg" className="rounded-full px-10 py-6 border-border hover:bg-secondary/10 text-xs uppercase tracking-[0.2em] font-bold transition-all">
+                Explore History
+              </Button>
+            </div>
           </div>
-          
-          <div className="mt-12 flex gap-4">
-            <Button size="lg" className="rounded-full px-10 py-6 bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-[1.02] active:scale-95 text-xs uppercase tracking-[0.2em] font-bold shadow-xl shadow-primary/20 transition-all">
-              View Learning Paths <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
-            <Button variant="outline" size="lg" className="rounded-full px-10 py-6 border-border hover:bg-secondary/10 text-xs uppercase tracking-[0.2em] font-bold transition-all">
-              Explore History
-            </Button>
-          </div>
-        </div>
 
         {/* Right Column: Academic Dashboard */}
         <div className="md:col-span-3 p-6 md:p-8 flex flex-col gap-8 order-3 bg-secondary/5 border-l border-border/50 overflow-y-auto max-h-[calc(100vh-5rem)] scrollbar-hide">

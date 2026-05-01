@@ -9,6 +9,8 @@ import { GraduationCap } from "lucide-react"
 import Home from "@/pages/Home"
 import About from "@/pages/About"
 import Academic from "@/pages/Academic"
+import Statistics from "@/pages/Statistics"
+import Campus from "@/pages/Campus"
 import PlaceholderPage from "@/pages/Placeholder"
 
 export default function App() {
@@ -25,6 +27,8 @@ export default function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/academic" element={<Academic />} />
+            <Route path="/statistics" element={<Statistics />} />
+            <Route path="/campus" element={<Campus />} />
             <Route path="/events" element={<PlaceholderPage title="Events" />} />
             <Route path="/alumni" element={<PlaceholderPage title="Alumni" />} />
             <Route path="/staff" element={<PlaceholderPage title="Staff Directory" />} />
